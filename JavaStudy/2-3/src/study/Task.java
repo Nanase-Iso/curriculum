@@ -16,8 +16,8 @@ public class Task extends Calculator{
     	int c = 30;
 
     	System.out.println("plusメソッドの引数が一つの場合:" + super.plus (a));
-    	System.out.println("plusメソッドの引数が一つの場合:" + super.plus(b));
-    	System.out.println("plusメソッドの引数が一つの場合:" + super.plus(c));
+    	System.out.println("plusメソッドの引数が一つの場合:" + super.plus(a,b));
+    	System.out.println("plusメソッドの引数が一つの場合:" + super.plus(a,b,c));
 
     }
 }
