@@ -1,0 +1,54 @@
+@media screen and (max-width: 479px) {
+    #wrapper {
+        width: 200px;
+        
+    }
+    .header {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    .header-left {
+        position: absolute;
+        top: 20px;
+        left: 70px;
+    }
+    .header-center {
+        position: absolute;
+        top: 70px;
+        left: 70px;
+    }
+    .header-right {
+        position: absolute;
+        top: 120px;
+        left: 70px;
+    }
+    .contents {
+        width: 100%;
+        float: none;
+    }
+    .left {
+        width: 200px;
+        height: 100px;
+    }
+    .right {  
+        width: 200px;
+        height: 210px;
+        position: relative;
+    }
+    .right-upper {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
+    .right-center {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+    }
+    .right-lower {
+        position: absolute;
+        top: 140px;
+        left: 30px;
+    }
+}
