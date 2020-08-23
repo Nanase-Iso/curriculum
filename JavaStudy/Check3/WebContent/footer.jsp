@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <!-- フッターを作成 -->
 	<div class="footer">
 		<div class="footer-label">hoge.Inc</div>
