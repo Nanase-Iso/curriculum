@@ -24,12 +24,10 @@
 
         // FIXME Step-2-1: リクエストよりレスポンスBeanを取得しなさい。
         // Tips: 正確な型（クラス）でキャストすること
-        //ここから
-        responseBean = (ResponseBean) request.getAttribute("responseBean");
-		empResultList = responseBean.getEmplyeeBeanList();
-		requestStatus = responseBean.getRequestStaus();
-		message = responseBean.getMessage();
-		//ここまで
+        responseBean = (ResponseBean) request.getAttribute("ResponseBean");
+        empResultList = responseBean.getEmplyeeBeanList();
+        requestStatus = responseBean.getRequestStaus();
+        message = responseBean.getMessage();
     } catch (Exception e) {
         Logger.log(new Throwable(), e);
     }
@@ -48,10 +46,8 @@
     <br>
     <% if (requestStatus < 2 && !message.isEmpty()) { %>
         <!-- FIXME Step-2-2: 式（Expression）を用いてメッセージ（message）を表示しなさい。 -->
-        <p>><%=message%></p>
-    <%
-   		 }
-    %>
+        <p><%     %></p>
+    <% } %>
     <% if (!empResultList.isEmpty()) { %>
     <div class="div-table-list">
         <table id="resultTable" class="table-emp-list" border="1">
@@ -71,11 +67,11 @@
                 <td class="td-marker"></td>
                 <!-- FIXME Step-2-3: 社員情報一覧に表示する内容を式（Expression）を用いて表示しなさい。 -->
                 <!-- Tips: ループにより取得したリスト内の社員情報Beanを使用すること -->
-                <td id="empId"><%=emp.getEmpId()%></td>
-                <td title="<%=emp.getName()%>"><%=emp.getName()%></td>
-                <td title="<%=emp.getMail()%>"><%=emp.getMail()%></td>
-                <td title="<%=emp.getProgramingLanguage()%>"><%=emp.getProgramingLanguage()%></td>
-                <td title="<%=emp.getComment()%>"><%=emp.getComment()%></td>
+                <td id="empId">[ここへ記述</td>
+                <td title="<%=emp.getName()%>">氏名</td>
+                <td title="<%=emp.getMail()%>">メールアドレス</td>
+                <td title="<%=emp.getProgramingLanguage()%>">プログラミング言語</td>
+                <td title="<%=emp.getComment()%>">コメント</td>
                 <td>
                     <form action="/MVC_Task/employee" method="get">
                         <input type="hidden" name="sender" value="/employeeResult.jsp"></input>

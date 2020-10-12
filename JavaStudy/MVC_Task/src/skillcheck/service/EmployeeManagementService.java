@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 // FIXME Step-5-1: 「EmployeeBean, ResponseBean, ConstMessage, ConstSQL, EmployeeDao, SC5Exception, Logger」をインポートしなさい。
+// [ここへ記述]
 import skillcheck.bean.EmployeeBean;
 import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
@@ -17,7 +18,6 @@ import skillcheck.exception.MVCException;
 import skillcheck.logger.Logger;
 
 /**
- * ビジネスロック（ Model ）
  * 社員情報管理サービス
  * <pre>
  * 当該クラスで提供する機能
@@ -34,7 +34,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
      * コンストラクタ
      */
     public EmployeeManagementService() {
-    	//レスポンスデータの格納用変数を持つBaseServiceクラスの呼び出し（各フィールドの初期化）
+    	//BaseServiceクラスの呼び出し（各フィールドの初期化）
         super();
     }
 
@@ -83,7 +83,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
             // 共通処理: 社員情報テーブルへのアクセス
             // FIXME Step-5-3: SELECT文の実行(5-1, 5-2)
             // Tips: executeSelectQueryメソッド内を修正してください。
-            this.executeSelectQuery(eCase, pEmployeeBeanList);
+            this.executeSelectQuery();
 
             // SQL実行結果よりメタデータを取得
             final ResultSetMetaData meta = resultSet.getMetaData();
@@ -189,38 +189,30 @@ public final class EmployeeManagementService extends BaseService implements Empl
                 // FIXME Step-5-4: pEmployeeBeanListの「1件目の要素のみ」から社員情報を取得しなさい。
                 // Tips1: ループ文を使用すること（正解は複数パターンあります）
                 // Tips2: 格納先はローカル変数のempとすること
-            	for (EmployeeBean employeeBean : pEmployeeBeanList) {
-            		emp = employeeBean;
-				}
+                // [ここへ記述]
 
                 if (Objects.nonNull(emp)) {
                     Logger.log(new Throwable(), "pEmployeeBeanList[0].empId = " + emp.getEmpId());
-                    //完全一致検索のSQL文
+
                     sbQuery.append(ConstSQL.SELECT_BY_EMPID);
 
                     // FIXME Step-5-5: 以下の手順に沿って適当な処理を記述しなさい。
                     // 1. 上記で構築したSELECT文を引数にして、connectionよりプリペアードステートメントオブジェクトを作成
                     // 2. 1で作成したオブジェクトをpreparedStatementへ格納
                     // Tips: sbQueryは、sbQuery.toString()でStringへ変換
-                    preparedStatement = connection.prepareStatement(sbQuery.toString());
-                    preparedStatement.setString(1, emp.getEmpId());
-                    this.resultSet = preparedStatement.executeQuery();
-                    System.out.println(resultSet.toString());
+                    // [ここへ記述]
 
                     // LIKEを使用するため、パラメータを編集
-                    //社員番号（前後方一致
                     final String empId = ExecuteCase.FIND_BY_EMPID_WITH_LIKE.equals(eCase)
                             ? ("%" + emp.getEmpId() + "%")
                             : emp.getEmpId();
 
                     // FIXME Step-5-6: preparedStatementに適切なパラメーターをセットしなさい。
                     // Tips: パラメータをセットするインデックスに注意
-                    //ここから↓
-
+                    // [ここへ記述]
 
                     // FIXME Step-5-7: preparedStatementよりSQL(SELECT文)を実行し、resultSetへ結果を格納しなさい。
-
-
+                    // [ここへ記述]
 
                     Logger.log(new Throwable(), "SQL: " +  this.preparedStatement.toString());
                 }

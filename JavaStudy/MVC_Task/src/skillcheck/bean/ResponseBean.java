@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * レスポンス情報Bean（モデル）
- *ユーザへのレスポンスデータ
+ *
  * @author y.sato
  * @since 2019/01/02
  */
