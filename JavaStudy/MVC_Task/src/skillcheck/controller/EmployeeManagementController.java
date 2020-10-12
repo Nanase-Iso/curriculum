@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import skillcheck.bean.EmployeeBean;
 import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
 import skillcheck.exception.MVCException;
@@ -27,12 +26,15 @@ import skillcheck.util.RequestTypeUtil.RequestType;
  * @author y.sato
  * @since 2019/01/02
  */
+//login.jspから入力値を受け取るサーブレット
+
 public final class EmployeeManagementController extends BaseServlet {
 
     /**
      * コンストラクタ
      */
     public EmployeeManagementController() {
+    	//BaseServletの呼び出し
         super();
     }
 
@@ -44,12 +46,7 @@ public final class EmployeeManagementController extends BaseServlet {
 
         // FIXME Step-4-1: 社員情報管理サービスのインスタンスを生成しなさい。
         // Tips: 定義済みフィールド変数を使用
-        // [ここへ記述]
-        EmployeeManagementService employeeManagementService = new EmployeeManagementService();
-        EmployeeBean employeeBean = new EmployeeBean();
-        employeeBean = employeeManagementService.
-
-
+        ems = new EmployeeManagementService();
 
         boolean hasSession = false;
 
@@ -117,13 +114,20 @@ public final class EmployeeManagementController extends BaseServlet {
         boolean isLoginError = false;
 
         /* 関数型インターフェース（ラムダ式）- START */
+        //ラムダ式は、メソッドの処理中のクラスを宣言や、インターフェースを実装したクラスの定義も可能。
+        //※宣言を省略することも可能。
+        //インターフェースを実装したインスタンスを生成する式である。
+        //関数型インターフェースは単一のメソッドをもつインターフェース群。
+
         // MEMO: Functionは、apply(引数)で処理を実行
 
+        //Function<T(メソッドの引数の型),R(戻り値の型)>、R apply(T t
         // リクエストより社員番号を取得（※削除時は複数の可能性あり）: 関数型インターフェース（ラムダ式）
         Function<HttpServletRequest, List<String>> rmdGetEmpIdList = (rmdRequest) -> {
             // FIXME Step-4-2: 各jspよりPOSTで送信されたリクエストパラメーターの社員番号を取得しなさい。
             // Tips: jsp側のname属性と一致させること
-            final String pEmpId = "[ここへ記述]";
+        	//リクエストパラメータ―からempIdを取得、pEmpIdに代入。
+            final String pEmpId = rmdRequest.getParameter("empId").trim();
             return Arrays.asList(pEmpId);
         };
         /* 関数型インターフェース（ラムダ式）- END */
@@ -143,7 +147,7 @@ public final class EmployeeManagementController extends BaseServlet {
 
             // FIXME Step-4-3: 社員情報管理サービスのインスタンス変数を生成しなさい。
             // Tips: 定義済みフィールド変数を使用
-            // [ここへ記述]
+            ems = new EmployeeManagementService();
 
             reqEmpIdList = rmdGetEmpIdList.apply(request);
             reqEmpIdList.forEach(id -> Logger.log(new Throwable(), "reqEmpId = " + id));
@@ -160,6 +164,7 @@ public final class EmployeeManagementController extends BaseServlet {
                 break;
             }
         } catch (NullPointerException e) {
+        	//"ヌルポです！&#010;NULLの可能性がある変数が存在します！&#010;メソッドを呼び出している変数の値を確認しましょう！"
             super.executeSetExceptionInfo(e, ConstMessage.EXCEPTION_NULL, -1);
         } catch (MVCException e) {
             this.responseBean = e.getResponseBean();
@@ -172,7 +177,7 @@ public final class EmployeeManagementController extends BaseServlet {
             // FIXME Step-4-4: 取得結果（ResponseBean）をjspへ渡すための処理を記述しなさい。
             // Tips1: リクエストへレスポンス情報をセット
             // Tips2: キー名は「CONST_REQUST_KEY_FOR_RESPONSE_BEAN」使用
-            // [ここへ記述]
+            request.setAttribute(CONST_REQUST_KEY_FOR_RESPONSE_BEAN, this.responseBean);
 
             Logger.log(new Throwable(), "遷移先 = " + this.destinationTarget);
 
@@ -199,7 +204,8 @@ public final class EmployeeManagementController extends BaseServlet {
      */
     private RequestType getRequestType(final HttpServletRequest request) throws MVCException {
         Logger.logStart(new Throwable());
-
+        //リクエストパラメータからパラメータ名を情報を取得。
+        //変数requestTypeNameにONST_ELEMENT_NAME_REQUEST→requestTypeを代入。
         final String requestTypeName = request.getParameter(CONST_ELEMENT_NAME_REQUEST);
         Logger.log(new Throwable(), "requestTypeName = " + requestTypeName);
 

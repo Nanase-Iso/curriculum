@@ -14,8 +14,8 @@ import skillcheck.exception.MVCException;
 public interface EmployeeDao {
 
     /**
-     * ExecuteCase: 処理フラグ
-     *
+     * ExecuteCaseメソッド: 処理フラグ
+     *オンかオフのどちらか
      * <pre>
      * {@code
      * ALL 全件
@@ -23,6 +23,7 @@ public interface EmployeeDao {
      * FIND_BY_EMPID_WITH_LIKE 社員番号（前後方一致}
      * </pre>
      */
+	//Enum(列挙型)とは、複数の定数をひとつにまとめておくことができる型のこと。
     public enum ExecuteCase {
         FIND_ALL,
         FIND_BY_EMPID,
@@ -30,7 +31,7 @@ public interface EmployeeDao {
     }
 
     /**
-     * 社員情報取得処理（オーバロード）
+     * 社員情報取得処理①（オーバロード）
      *
      * @return responseBean <pre>レスポンスデータ（社員情報データ／メッセージ）</pre>
      * @throws MVCException
@@ -38,7 +39,7 @@ public interface EmployeeDao {
     public ResponseBean getEmployeeData(final ExecuteCase eCase) throws MVCException;
 
     /**
-     * 社員情報取得処理（オーバロード）
+     * 社員情報取得処理②（オーバロード）
      *
      * @param ExecuteCase <pre>完全一致 or 前後方一致</pre>
      * @param empId <pre>検索条件となる社員番号</pre>

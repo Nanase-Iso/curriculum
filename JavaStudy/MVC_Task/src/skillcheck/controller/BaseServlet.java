@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import skillcheck.bean.EmployeeBean;
 import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
+import skillcheck.dao.EmployeeDao.ExecuteCase;
 import skillcheck.exception.MVCException;
 import skillcheck.logger.Logger;
 import skillcheck.service.EmployeeManagementService;
@@ -30,7 +31,7 @@ public abstract class BaseServlet extends HttpServlet {
 
     // FIXME Step-3: 定数定義
     // FIXME Step-3-1: リクエスト判別用のボタンの属性名を記述しなさい。
-    protected static final String CONST_ELEMENT_NAME_REQUEST = "requestTypeName";
+    protected static final String CONST_ELEMENT_NAME_REQUEST = "requestType";
     protected static final String CONST_REQUST_KEY_FOR_SENDER = "sender";
     protected static final String CONST_REQUST_KEY_FOR_REDIRECT = "redirect";
     protected static final String CONST_REQUST_KEY_FOR_RESPONSE_BEAN = "responseBean";
@@ -38,7 +39,7 @@ public abstract class BaseServlet extends HttpServlet {
     /** ・リクエスト対象（リクエスト&レスポンスを渡す先）のjspファイル */
     protected static final String CONST_DESTINATION_LOGIN_JSP = "/MVC_Task/login.jsp";
     // FIXME Step-3-2: 実行結果表示用のjspファイルのパスを記述しなさい。
-    protected static final String CONST_DESTINATION_RESULT_JSP = "/MVC_Task/employeeResult.jsp";
+    protected static final String CONST_DESTINATION_RESULT_JSP = "/employeeResult.jsp";
 
     /* フィールド変数の定義 */
     /** フォーワード先 */
@@ -131,6 +132,7 @@ public abstract class BaseServlet extends HttpServlet {
      * @param request
      * @return
      * @throws IOException
+     * @throws MVCException
      */
     protected boolean validateLogin(final HttpServletRequest request) throws IOException {
         Logger.logStart(new Throwable());
@@ -149,7 +151,9 @@ public abstract class BaseServlet extends HttpServlet {
             // Tips1: 社員情報管理サービスはインスタンスが生成済みのものを利用すること
             // Tips2: 完全一致検索の社員情報取得を呼び出すこと
             // Tips3: 第二引数の渡し方に注意すること
-            // ←ここへ記述
+        	EmployeeManagementService ems = new EmployeeManagementService();
+			EmployeeBean eb = new EmployeeBean(reqEmpId);
+			responseBean = ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, eb);
 
             // 最初の1件を取得
             resEmployeeBean = responseBean.getEmplyeeBeanList().stream().findFirst().orElse(null);

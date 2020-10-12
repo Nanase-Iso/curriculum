@@ -12,6 +12,7 @@ import java.util.Calendar;
 import bean.EmployeeBean;
 
 /**
+ * ・ビジネスロック（ Model ）
  * ・社員情報検索サービス
  */
 

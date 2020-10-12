@@ -1,0 +1,66 @@
+情報: Serverのバージョン名：Apache Tomcat/9.0.36 [日 10月 04 23:56:17 JST 2020]
+情報: Server ビルド:          Jun 3 2020 17:07:09 UTC [日 10月 04 23:56:17 JST 2020]
+情報: サーバーのバージョン番号：9.0.36.0 [日 10月 04 23:56:17 JST 2020]
+情報: OS 名:               Windows 10 [日 10月 04 23:56:17 JST 2020]
+情報: OS バージョン:            10.0 [日 10月 04 23:56:17 JST 2020]
+情報: アーキテクチャ:          amd64 [日 10月 04 23:56:17 JST 2020]
+情報: Java Home:             C:\Users\nanas\Downloads\pleiades-2020-06-java-win-64bit-jre_20200702\pleiades\java\11 [日 10月 04 23:56:17 JST 2020]
+情報: JVM バージョン:           11.0.7+10 [日 10月 04 23:56:17 JST 2020]
+情報: JVM ベンダ：            AdoptOpenJDK [日 10月 04 23:56:17 JST 2020]
+情報: CATALINA_BASE:         C:\LetsEngineer\curriculum\JavaStudy\.metadata\.plugins\org.eclipse.wst.server.core\tmp0 [日 10月 04 23:56:17 JST 2020]
+情報: CATALINA_HOME:         C:\Users\nanas\Downloads\pleiades-2020-06-java-win-64bit-jre_20200702\pleiades\tomcat\9 [日 10月 04 23:56:17 JST 2020]
+情報: コマンドライン引数：-Dcatalina.base=C:\LetsEngineer\curriculum\JavaStudy\.metadata\.plugins\org.eclipse.wst.server.core\tmp0 [日 10月 04 23:56:17 JST 2020]
+情報: コマンドライン引数：-Dcatalina.home=C:\Users\nanas\Downloads\pleiades-2020-06-java-win-64bit-jre_20200702\pleiades\tomcat\9 [日 10月 04 23:56:17 JST 2020]
+情報: コマンドライン引数：-Dwtp.deploy=C:\LetsEngineer\curriculum\JavaStudy\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps [日 10月 04 23:56:17 JST 2020]
+情報: コマンドライン引数：-Dfile.encoding=UTF-8 [日 10月 04 23:56:17 JST 2020]
+情報: 商用環境に最適な性能を発揮する APR ベースの Tomcat ネイティブライブラリが java.library.path [C:\Users\nanas\Downloads\pleiades-2020-06-java-win-64bit-jre_20200702\pleiades\java\11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/nanas/Downloads/pleiades-2020-06-java-win-64bit-jre_20200702/pleiades/eclipse//jre/bin/server;C:/Users/nanas/Downloads/pleiades-2020-06-java-win-64bit-jre_20200702/pleiades/eclipse//jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Program Files\Git\cmd;"C:\Program Files\Java\jdk-14.0.2\bin;";C:\Users\nanas\AppData\Local\Microsoft\WindowsApps;C:\Users\nanas\AppData\Local\Microsoft\WindowsApps;C:\Users\nanas\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\nanas\AppData\Local\GitHubDesktop\bin;C:\Users\nanas\Downloads\pleiades-2020-06-java-win-64bit-jre_20200702\pleiades\eclipse;;.] に存在しません。 [日 10月 04 23:56:17 JST 2020]
+情報: プロトコルハンドラ ["http-nio-8080"] を初期化します。 [日 10月 04 23:56:17 JST 2020]
+情報: サーバーの初期化 [1,088]ms [日 10月 04 23:56:17 JST 2020]
+情報: サービス [Catalina] を起動します [日 10月 04 23:56:17 JST 2020]
+情報: サーブレットエンジンの起動：[Apache Tomcat/9.0.36] [日 10月 04 23:56:17 JST 2020]
+警告: セッション ID を生成するための SecureRandom インスタンスの作成に [172] ミリ秒かかりました。アルゴリズムは [SHA1PRNG] です。 [日 10月 04 23:56:18 JST 2020]
+情報: 少なくとも1つのJARが、まだTLDを含んでいないTLDについてスキャンされました。 スキャンしたが、そこにTLDが見つからなかったJARの完全なリストについては、このロガーのデバッグログを有効にしてください。 スキャン中に不要なJARをスキップすると、起動時間とJSPのコンパイル時間が改善されます。 [日 10月 04 23:56:18 JST 2020]
+情報: プロトコルハンドラー ["http-nio-8080"] を開始しました。 [日 10月 04 23:56:18 JST 2020]
+情報: サーバーの起動 [862]ms [日 10月 04 23:56:18 JST 2020]
+[MEMORY:43450880][2020/10/04 11:56:19.543] [org.apache.jsp.login_jsp] [_jspService] [168] セッションあり
+[MEMORY:43450880][2020/10/04 11:56:19.545] [org.apache.jsp.login_jsp] [_jspService] [189] message = 
+[MEMORY:43450880][2020/10/04 11:56:20.243] [skillcheck.controller.BaseServlet] [<init>] [56] START
+[MEMORY:43450880][2020/10/04 11:56:20.248] [skillcheck.controller.BaseServlet] [<init>] [60] END
+[MEMORY:43450880][2020/10/04 11:56:20.268] [skillcheck.controller.EmployeeManagementController] [doPost] [102] START
+[MEMORY:43450880][2020/10/04 11:56:20.270] [skillcheck.controller.EmployeeManagementController] [getRequestType] [206] START
+[MEMORY:43450880][2020/10/04 11:56:20.272] [skillcheck.controller.EmployeeManagementController] [getRequestType] [210] requestTypeName = login
+[MEMORY:43450880][2020/10/04 11:56:20.273] [skillcheck.controller.EmployeeManagementController] [getRequestType] [229] this.responseBean = skillcheck.bean.ResponseBean@250d7cce
+[MEMORY:43450880][2020/10/04 11:56:20.274] [skillcheck.controller.EmployeeManagementController] [getRequestType] [239] END
+[MEMORY:43450880][2020/10/04 11:56:20.274] [skillcheck.controller.EmployeeManagementController] [doPost] [137] RequestType = LOGIN
+[MEMORY:43452928][2020/10/04 11:56:20.276] [skillcheck.service.BaseService] [<init>] [40] START
+[MEMORY:43872440][2020/10/04 11:56:20.276] [skillcheck.service.BaseService] [<init>] [47] END
+[MEMORY:43872440][2020/10/04 11:56:20.277] [skillcheck.controller.EmployeeManagementController] [lambda$1] [153] reqEmpId = 
+[MEMORY:43872440][2020/10/04 11:56:20.278] [skillcheck.controller.EmployeeManagementController] [doPost] [158] --- ログイン ---
+[MEMORY:43872440][2020/10/04 11:56:20.278] [skillcheck.controller.BaseServlet] [validateLogin] [138] START
+[MEMORY:43872440][2020/10/04 11:56:20.278] [skillcheck.service.BaseService] [<init>] [40] START
+[MEMORY:43872440][2020/10/04 11:56:20.279] [skillcheck.service.BaseService] [<init>] [47] END
+[MEMORY:43872440][2020/10/04 11:56:20.283] [skillcheck.service.EmployeeManagementService] [getEmployeeData] [55] START
+[MEMORY:43872440][2020/10/04 11:56:20.283] [skillcheck.service.EmployeeManagementService] [executeDBAccess] [72] START
+[MEMORY:43872440][2020/10/04 11:56:20.284] [skillcheck.service.EmployeeManagementService] [executeDBAccess] [73] ExecuteCase = FIND_BY_EMPID
+[MEMORY:43872440][2020/10/04 11:56:20.284] [skillcheck.service.BaseService] [executeGetConnection] [54] START
+[MEMORY:11394216][2020/10/04 11:56:20.660] [skillcheck.service.BaseService] [executeGetConnection] [76] END
+[MEMORY:11394216][2020/10/04 11:56:20.660] [skillcheck.service.EmployeeManagementService] [executeSelectQuery] [167] START
+[MEMORY:11394216][2020/10/04 11:56:20.661] [skillcheck.service.EmployeeManagementService] [executeSelectQuery] [197] pEmployeeBeanList[0].empId = 
+org.postgresql.jdbc.PgResultSet@37e8b197
+[MEMORY:11819584][2020/10/04 11:56:20.705] [skillcheck.service.EmployeeManagementService] [executeSelectQuery] [224] SQL: SELECT EmpId, Password, Name, Mail, ProgramingLanguage, Comment FROM employee  WHERE empId = '%%' AND deleteFlg = '0'
+[MEMORY:11819584][2020/10/04 11:56:20.705] [skillcheck.service.EmployeeManagementService] [executeSelectQuery] [243] END
+[MEMORY:12273120][2020/10/04 11:56:20.709] [skillcheck.service.EmployeeManagementService] [executeDBAccess] [90] meta = org.postgresql.jdbc.PgResultSetMetaData@2589303d
+[MEMORY:12273120][2020/10/04 11:56:20.709] [skillcheck.service.EmployeeManagementService] [executeDBAccess] [122] reqStatus  = 0
+[MEMORY:12273120][2020/10/04 11:56:20.710] [skillcheck.service.EmployeeManagementService] [executeDBAccess] [123] reqMessage = 
+[MEMORY:12273120][2020/10/04 11:56:20.710] [skillcheck.service.BaseService] [executeCloseSQL] [114] START
+[MEMORY:12273120][2020/10/04 11:56:20.713] [skillcheck.service.BaseService] [executeCloseSQL] [125] END
+[MEMORY:12273120][2020/10/04 11:56:20.713] [skillcheck.service.EmployeeManagementService] [executeDBAccess] [153] END
+[MEMORY:12273120][2020/10/04 11:56:20.714] [skillcheck.service.EmployeeManagementService] [getEmployeeData] [59] END
+[MEMORY:12273120][2020/10/04 11:56:20.714] [skillcheck.controller.BaseServlet] [validateLogin] [192] isLoginError = true
+[MEMORY:12273120][2020/10/04 11:56:20.715] [skillcheck.controller.BaseServlet] [validateLogin] [194] END
+[MEMORY:12273120][2020/10/04 11:56:20.715] [skillcheck.controller.EmployeeManagementController] [doPost] [174] reqStatus  = 0
+[MEMORY:12273120][2020/10/04 11:56:20.715] [skillcheck.controller.EmployeeManagementController] [doPost] [175] reqMessage = 該当する社員情報がありません。
+[MEMORY:12273120][2020/10/04 11:56:20.716] [skillcheck.controller.EmployeeManagementController] [doPost] [182] 遷移先 = null
+[MEMORY:12273120][2020/10/04 11:56:20.716] [skillcheck.controller.EmployeeManagementController] [doPost] [195] END
+[MEMORY:12883136][2020/10/04 11:56:20.719] [org.apache.jsp.login_jsp] [_jspService] [168] セッションあり
+[MEMORY:12883136][2020/10/04 11:56:20.720] [org.apache.jsp.login_jsp] [_jspService] [189] message = 該当する社員情報がありません。
