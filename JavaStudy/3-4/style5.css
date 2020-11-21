@@ -1,0 +1,60 @@
+.clearfix::after { 
+    content: ''; 
+    display: block; 
+    clear: both;
+}
+#wrapper {
+    width: 600px;
+    height: 600px; 
+    margin: 0 auto; 
+/* wrapperクラスを中央寄せ */
+}
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #FFFF00;
+}
+.center {
+    width: 100%;
+    height: 300px;
+}
+.center-box1 {
+    float: left;
+    width: 200px;
+    height: 50%;
+    background-color: #33FFFF;
+}
+.center-box2 {
+    float: left;
+    width: 200px;
+    height: 50%;
+    background-color: #FF0000;
+}
+.center-box3 {
+    float: left;
+    width: 200px;
+    height: 50%;
+    background-color: #0000FF;
+}
+.center-box4 {
+    float: left;
+    width: 450px;
+    height: 50%;
+    background-color: #00FF00;
+}
+.center-box5 {
+    float: left;
+    width: 150px;
+    height: 50%;
+    background-color: #FF00FF;
+}
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #33FFFF;
+    clear: both;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
